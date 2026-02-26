@@ -1,0 +1,5 @@
+FLM-U.pdf
+*.log
+.DS_Store
+Thumbs.db
+certs/README.txt

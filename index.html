@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goutham Reddy | Software Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-text">
+        <span class="loader-name">GR</span>
+        <p class="loader-subtitle">Initializing Portfolio...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="brand-text">GR<span class="brand-dot">.</span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#certifications" class="nav-link" data-section="certifications">Certs</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </div>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="section">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for Opportunities</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line" data-text="Goutham">Goutham</span>
+        <span class="name-line accent" data-text="Reddy">Reddy</span>
+      </h1>
+      <div class="hero-titles">
+        <span class="title-prefix">I am a </span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-desc">
+        Crafting scalable, secure, and elegant full-stack solutions with <br/>
+        modern frameworks, RESTful APIs and AI-powered tools.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="3">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="8">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <span>Hire Me</span>
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://linkedin.com/in/gouthamreddy45" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/goutham1974" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:gouthamreddygopireddy@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+919182499791" class="social-link" title="Phone"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="tech-orbit">
+        <div class="orbit-center">
+          <div class="center-avatar">
+            <span>GR</span>
+          </div>
+        </div>
+        <div class="orbit orbit-1">
+          <div class="orbit-item" style="--angle:0deg"><div class="tech-badge java"><i class="fab fa-java"></i><span>Java</span></div></div>
+          <div class="orbit-item" style="--angle:72deg"><div class="tech-badge spring"><i class="fas fa-leaf"></i><span>Spring</span></div></div>
+          <div class="orbit-item" style="--angle:144deg"><div class="tech-badge react"><i class="fab fa-react"></i><span>React</span></div></div>
+          <div class="orbit-item" style="--angle:216deg"><div class="tech-badge docker"><i class="fab fa-docker"></i><span>Docker</span></div></div>
+          <div class="orbit-item" style="--angle:288deg"><div class="tech-badge mysql"><i class="fas fa-database"></i><span>MySQL</span></div></div>
+        </div>
+        <div class="orbit orbit-2">
+          <div class="orbit-item" style="--angle:36deg"><div class="tech-badge git"><i class="fab fa-git-alt"></i><span>Git</span></div></div>
+          <div class="orbit-item" style="--angle:156deg"><div class="tech-badge python"><i class="fab fa-python"></i><span>Python</span></div></div>
+          <div class="orbit-item" style="--angle:276deg"><div class="tech-badge linux"><i class="fab fa-linux"></i><span>Linux</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Who I <span class="gradient-text">Am</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="about-card-inner">
+            <div class="about-avatar-wrapper">
+              <div class="about-avatar">
+                <span>GVG</span>
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring ring-2"></div>
+              </div>
+              <div class="about-role-badge">
+                <i class="fas fa-code"></i>
+                <span>Full Stack Dev</span>
+              </div>
+            </div>
+            <div class="about-info">
+              <h3 class="about-name">Gopireddy Venkata Goutham Reddy</h3>
+              <p class="about-tagline">Software Developer | Full Stack Enthusiast | Cyber Security Scholar</p>
+              <div class="about-details">
+                <div class="detail-item"><i class="fas fa-map-marker-alt"></i><span>Allagadda, Andhra Pradesh, India</span></div>
+                <div class="detail-item"><i class="fas fa-graduation-cap"></i><span>B.Tech CSE (Cyber Security) — CGPA: 8.5</span></div>
+                <div class="detail-item"><i class="fas fa-university"></i><span>SVCE&T, Chittoor (2022–2026)</span></div>
+                <div class="detail-item"><i class="fas fa-envelope"></i><span>gouthamreddygopireddy@gmail.com</span></div>
+                <div class="detail-item"><i class="fas fa-phone"></i><span>+91-9182499791</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-area reveal">
+          <p class="about-bio">
+            I'm a passionate <strong>Software Developer</strong> with strong programming and system design fundamentals. 
+            Experienced in full-stack development spanning both frontend and backend applications.
+          </p>
+          <p class="about-bio">
+            Skilled in building <strong>scalable, secure solutions</strong> using modern frameworks, RESTful APIs, and AI tools. 
+            A quick learner and collaborative team player committed to writing clean, maintainable, and efficient code.
+          </p>
+          <div class="about-traits">
+            <div class="trait-chip"><i class="fas fa-bolt"></i> Quick Learner</div>
+            <div class="trait-chip"><i class="fas fa-users"></i> Team Player</div>
+            <div class="trait-chip"><i class="fas fa-shield-alt"></i> Security Focused</div>
+            <div class="trait-chip"><i class="fas fa-rocket"></i> Self-Motivated</div>
+            <div class="trait-chip"><i class="fas fa-brain"></i> Problem Solver</div>
+            <div class="trait-chip"><i class="fas fa-globe"></i> Tech Explorer</div>
+          </div>
+          <div class="about-interests">
+            <h4>Interests & Hobbies</h4>
+            <div class="interests-row">
+              <span><i class="fas fa-microchip"></i> New Technologies</span>
+              <span><i class="fas fa-plane"></i> Traveling</span>
+              <span><i class="fas fa-cricket"></i> Cricket</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="section alt-bg">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-label">Expertise</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-universe reveal">
+        <!-- Skill Category Cards -->
+        <div class="skill-category-grid">
+
+          <div class="skill-cat-card reveal">
+            <div class="cat-icon"><i class="fas fa-code"></i></div>
+            <h4>Languages</h4>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Java</span><span class="skill-pct">90%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="90" style="--color:#f89820"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Python</span><span class="skill-pct">75%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="75" style="--color:#3776ab"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>C</span><span class="skill-pct">65%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="65" style="--color:#a8b9cc"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>SQL</span><span class="skill-pct">80%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="80" style="--color:#f29111"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-cat-card reveal">
+            <div class="cat-icon" style="--ico-color:#61dafb"><i class="fab fa-react"></i></div>
+            <h4>Frontend</h4>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>React.js</span><span class="skill-pct">85%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="85" style="--color:#61dafb"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>JavaScript</span><span class="skill-pct">82%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="82" style="--color:#f7df1e"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>HTML / CSS</span><span class="skill-pct">88%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="88" style="--color:#e34f26"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-cat-card reveal">
+            <div class="cat-icon" style="--ico-color:#6db33f"><i class="fas fa-server"></i></div>
+            <h4>Backend</h4>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Spring Boot</span><span class="skill-pct">88%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="88" style="--color:#6db33f"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Hibernate ORM</span><span class="skill-pct">82%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="82" style="--color:#59666c"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Microservices</span><span class="skill-pct">75%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="75" style="--color:#7c3aed"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Node.js</span><span class="skill-pct">72%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="72" style="--color:#339933"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>RESTful APIs</span><span class="skill-pct">90%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="90" style="--color:#06b6d4"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-cat-card reveal">
+            <div class="cat-icon" style="--ico-color:#2496ed"><i class="fab fa-docker"></i></div>
+            <h4>DevOps & Tools</h4>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Docker</span><span class="skill-pct">80%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="80" style="--color:#2496ed"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Git / GitHub</span><span class="skill-pct">85%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="85" style="--color:#f05032"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>Linux</span><span class="skill-pct">75%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="75" style="--color:#fcc624"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-label"><span>MySQL</span><span class="skill-pct">82%</span></div>
+                <div class="skill-track"><div class="skill-fill" data-pct="82" style="--color:#4479a1"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Circular Competency Rings -->
+        <div class="competency-rings reveal">
+          <h3 class="rings-title">Core Competencies</h3>
+          <div class="rings-row">
+            <div class="ring-item">
+              <svg class="ring-svg" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="50"/>
+                <circle class="ring-progress" cx="60" cy="60" r="50" data-pct="90" style="--ring-color:#7c3aed"/>
+              </svg>
+              <div class="ring-center"><span class="ring-pct">90%</span></div>
+              <p class="ring-label">OOP & Design</p>
+            </div>
+            <div class="ring-item">
+              <svg class="ring-svg" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="50"/>
+                <circle class="ring-progress" cx="60" cy="60" r="50" data-pct="85" style="--ring-color:#06b6d4"/>
+              </svg>
+              <div class="ring-center"><span class="ring-pct">85%</span></div>
+              <p class="ring-label">API Security</p>
+            </div>
+            <div class="ring-item">
+              <svg class="ring-svg" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="50"/>
+                <circle class="ring-progress" cx="60" cy="60" r="50" data-pct="82" style="--ring-color:#ec4899"/>
+              </svg>
+              <div class="ring-center"><span class="ring-pct">82%</span></div>
+              <p class="ring-label">AI Engineering</p>
+            </div>
+            <div class="ring-item">
+              <svg class="ring-svg" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="50"/>
+                <circle class="ring-progress" cx="60" cy="60" r="50" data-pct="78" style="--ring-color:#f59e0b"/>
+              </svg>
+              <div class="ring-center"><span class="ring-pct">78%</span></div>
+              <p class="ring-label">DSA</p>
+            </div>
+            <div class="ring-item">
+              <svg class="ring-svg" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="50"/>
+                <circle class="ring-progress" cx="60" cy="60" r="50" data-pct="88" style="--ring-color:#10b981"/>
+              </svg>
+              <div class="ring-center"><span class="ring-pct">88%</span></div>
+              <p class="ring-label">Full Stack Dev</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-label">Journey</span>
+        <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal" data-type="work">
+          <div class="timeline-dot">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="tcard-header">
+              <div class="tcard-meta">
+                <span class="tcard-type work-badge"><i class="fas fa-briefcase"></i> Internship</span>
+                <span class="tcard-date"><i class="far fa-calendar-alt"></i> Feb 2025 – May 2025</span>
+              </div>
+              <h3 class="tcard-title">Java Full Stack Intern</h3>
+              <p class="tcard-company"><i class="fas fa-building"></i> Rooman Technologies</p>
+            </div>
+            <div class="tcard-body">
+              <ul class="tcard-list">
+                <li>Designed and implemented robust REST APIs using <strong>Spring Boot</strong> and <strong>Hibernate</strong> for backend operations & data persistence.</li>
+                <li>Developed responsive UIs using <strong>React.js</strong> components, significantly enhancing user experience.</li>
+                <li>Contributed to a <strong>4-person Agile team</strong>, achieving a <strong>15% reduction</strong> in feature delivery time.</li>
+              </ul>
+              <div class="tcard-tags">
+                <span>Spring Boot</span><span>React.js</span><span>Hibernate</span><span>Agile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal right" data-type="edu">
+          <div class="timeline-dot">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="tcard-header">
+              <div class="tcard-meta">
+                <span class="tcard-type edu-badge"><i class="fas fa-graduation-cap"></i> Education</span>
+                <span class="tcard-date"><i class="far fa-calendar-alt"></i> 2022 – 2026</span>
+              </div>
+              <h3 class="tcard-title">B.Tech — Computer Science & Engineering</h3>
+              <p class="tcard-company"><i class="fas fa-university"></i> Sri Venkateshwara College of Engg. & Tech., Chittoor</p>
+            </div>
+            <div class="tcard-body">
+              <ul class="tcard-list">
+                <li>Specialization in <strong>Cyber Security</strong></li>
+                <li>Current CGPA: <strong>8.5 / 10</strong></li>
+                <li>Focus on Application Security, Secure Software Development & Full-Stack Engineering.</li>
+              </ul>
+              <div class="tcard-tags">
+                <span>Cyber Security</span><span>CGPA 8.5</span><span>B.Tech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section alt-bg">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <!-- AgriGuide -->
+        <div class="project-card reveal" data-tilt>
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div class="project-icon-wrap agri-gradient">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <div class="project-number">01</div>
+              <h3 class="project-title">AgriGuide</h3>
+              <p class="project-subtitle">Agricultural Guide Application</p>
+              <div class="project-tags">
+                <span>React.js</span><span>Spring Boot</span><span>MySQL</span><span>Docker</span><span>JWT</span>
+              </div>
+              <div class="project-hover-hint"><i class="fas fa-hand-pointer"></i> Hover to explore</div>
+            </div>
+            <div class="project-back">
+              <div class="project-back-header agri-gradient">
+                <i class="fas fa-seedling"></i>
+                <span>AgriGuide</span>
+              </div>
+              <div class="project-back-body">
+                <div class="feature-list">
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>Crop recommendations & CRUD</span></div>
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>Farmer experience sharing platform</span></div>
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>JWT + Spring Security + CORS</span></div>
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>Hibernate JPA & auto schema generation</span></div>
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>Deployed on Render (Docker) + Vercel</span></div>
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>GitHub Actions uptime monitoring</span></div>
+                </div>
+                <div class="project-date"><i class="far fa-calendar-alt"></i> Oct 2025</div>
+                <div class="project-links">
+                  <a href="https://github.com/goutham1974" target="_blank" class="proj-btn"><i class="fab fa-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WishCrate -->
+        <div class="project-card reveal" data-tilt>
+          <div class="project-card-inner">
+            <div class="project-front">
+              <div class="project-icon-wrap wish-gradient">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div class="project-number">02</div>
+              <h3 class="project-title">WishCrate</h3>
+              <p class="project-subtitle">E-Commerce Application</p>
+              <div class="project-tags">
+                <span>React</span><span>Vite</span><span>Spring Boot</span><span>JWT</span><span>Docker</span>
+              </div>
+              <div class="project-hover-hint"><i class="fas fa-hand-pointer"></i> Hover to explore</div>
+            </div>
+            <div class="project-back">
+              <div class="project-back-header wish-gradient">
+                <i class="fas fa-shopping-cart"></i>
+                <span>WishCrate</span>
+              </div>
+              <div class="project-back-body">
+                <div class="feature-list">
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>JWT-based authentication system</span></div>
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>Product catalog, cart, order management</span></div>
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>Role-based access control (RBAC)</span></div>
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>Admin Dashboard with analytics</span></div>
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>Dockerized backend as JAR</span></div>
+                  <div class="feature-item"><i class="fas fa-check-circle"></i><span>Frontend deployed on Netlify</span></div>
+                </div>
+                <div class="project-date"><i class="far fa-calendar-alt"></i> Mar 2025 – Apr 2025</div>
+                <div class="project-links">
+                  <a href="https://github.com/goutham1974" target="_blank" class="proj-btn"><i class="fab fa-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS SECTION -->
+  <section id="certifications" class="section">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-label">Achievements</span>
+        <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="cert-grid">
+
+        <!-- Internship Certificate - Featured -->
+        <div class="cert-card cert-card-featured reveal" data-cert-img="certs/internship-cert.jpg.pdf" data-cert-title="Java Full Stack Internship — Rooman Technologies">
+          <div class="cert-glow" style="--glow:#7c3aed"></div>
+          <div class="cert-icon-wrap" style="--cert-color:#7c3aed">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="cert-body">
+            <h4>Java Full Stack Internship</h4>
+            <p>Rooman Technologies &nbsp;|&nbsp; Feb 2025 – May 2025 &nbsp;|&nbsp; Built REST APIs with Spring Boot, Hibernate & React.js in an Agile team.</p>
+          </div>
+          <div class="cert-badge" style="--gold:#a855f7; background:rgba(168,85,247,0.12); border-color:rgba(168,85,247,0.3); color:#a855f7">
+            <i class="fas fa-briefcase"></i> Internship
+          </div>
+          <div class="cert-view-hint"><i class="fas fa-eye"></i> Click to view certificate</div>
+        </div>
+
+        <div class="cert-card reveal" data-cert-img="certs/sql-cert.jpg.pdf" data-cert-title="Application Development with SQL &amp; Databases">
+          <div class="cert-glow"></div>
+          <div class="cert-icon-wrap" style="--cert-color:#f89820">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="cert-body">
+            <h4>Application Development with SQL &amp; Databases</h4>
+            <p>Advanced SQL querying, database design and application integration.</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-certificate"></i> Certified</div>
+          <div class="cert-view-hint"><i class="fas fa-eye"></i> Click to view certificate</div>
+        </div>
+
+        <div class="cert-card reveal" data-cert-img="certs/nodejs-cert.jpg.pdf" data-cert-title="Back-end App Development with Node.js">
+          <div class="cert-glow" style="--glow:#339933"></div>
+          <div class="cert-icon-wrap" style="--cert-color:#339933">
+            <i class="fab fa-node-js"></i>
+          </div>
+          <div class="cert-body">
+            <h4>Back-end App Development with Node.js</h4>
+            <p>Server-side development using Node.js, Express, and REST APIs.</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-certificate"></i> Certified</div>
+          <div class="cert-view-hint"><i class="fas fa-eye"></i> Click to view certificate</div>
+        </div>
+
+        <div class="cert-card reveal" data-cert-img="certs/linux-cert.jpg.pdf" data-cert-title="Linux Administration">
+          <div class="cert-glow" style="--glow:#fcc624"></div>
+          <div class="cert-icon-wrap" style="--cert-color:#fcc624">
+            <i class="fab fa-linux"></i>
+          </div>
+          <div class="cert-body">
+            <h4>Linux Administration</h4>
+            <p>System administration, shell scripting, and Linux OS management.</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-certificate"></i> Certified</div>
+          <div class="cert-view-hint"><i class="fas fa-eye"></i> Click to view certificate</div>
+        </div>
+
+        <div class="cert-card reveal" data-cert-img="certs/cloud-cert.jpg.pdf" data-cert-title="Introduction to Cloud Computing">
+          <div class="cert-glow" style="--glow:#06b6d4"></div>
+          <div class="cert-icon-wrap" style="--cert-color:#06b6d4">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <div class="cert-body">
+            <h4>Introduction to Cloud Computing</h4>
+            <p>Fundamentals of cloud services, deployment models, and infrastructure.</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-certificate"></i> Certified</div>
+          <div class="cert-view-hint"><i class="fas fa-eye"></i> Click to view certificate</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section alt-bg">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Ready to Build Something Great?</h3>
+          <p>I'm currently open to new opportunities — whether it's a full-time role, freelance project, or just a chat about technology.</p>
+          <div class="contact-items">
+            <a href="mailto:gouthamreddygopireddy@gmail.com" class="contact-item">
+              <div class="contact-icon" style="--c:#ec4899"><i class="fas fa-envelope"></i></div>
+              <div class="contact-text">
+                <span class="contact-label">Email</span>
+                <span class="contact-val">gouthamreddygopireddy@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+919182499791" class="contact-item">
+              <div class="contact-icon" style="--c:#06b6d4"><i class="fas fa-phone"></i></div>
+              <div class="contact-text">
+                <span class="contact-label">Phone</span>
+                <span class="contact-val">+91-9182499791</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/gouthamreddy45" target="_blank" class="contact-item">
+              <div class="contact-icon" style="--c:#0077b5"><i class="fab fa-linkedin-in"></i></div>
+              <div class="contact-text">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-val">linkedin.com/in/gouthamreddy45</span>
+              </div>
+            </a>
+            <a href="https://github.com/goutham1974" target="_blank" class="contact-item">
+              <div class="contact-icon" style="--c:#f0f0f0"><i class="fab fa-github"></i></div>
+              <div class="contact-text">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-val">github.com/goutham1974</span>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-icon" style="--c:#f59e0b"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-text">
+                <span class="contact-label">Location</span>
+                <span class="contact-val">Allagadda, Andhra Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <input type="text" id="fname" placeholder=" " required />
+              <label for="fname">Your Name</label>
+              <div class="form-line"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" id="femail" placeholder=" " required />
+              <label for="femail">Your Email</label>
+              <div class="form-line"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" id="fsubject" placeholder=" " required />
+              <label for="fsubject">Subject</label>
+              <div class="form-line"></div>
+            </div>
+            <div class="form-group">
+              <textarea id="fmessage" rows="5" placeholder=" " required></textarea>
+              <label for="fmessage">Message</label>
+              <div class="form-line"></div>
+            </div>
+            <button type="submit" class="btn-submit">
+              <span class="btn-text">Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+              <div class="btn-loader" style="display:none"><div class="spinner"></div></div>
+            </button>
+            <div class="form-success" id="formSuccess" style="display:none">
+              <i class="fas fa-check-circle"></i> Message sent successfully!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">GR<span>.</span></div>
+      <p class="footer-copy">© 2026 Gopireddy Venkata Goutham Reddy — Built with ❤️ & code</p>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/gouthamreddy45" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/goutham1974" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:gouthamreddygopireddy@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Certificate Lightbox Modal -->
+  <div id="certModal" class="cert-modal" role="dialog" aria-modal="true" aria-label="Certificate Viewer">
+    <div class="cert-modal-overlay" id="certModalOverlay"></div>
+    <div class="cert-modal-box">
+      <div class="cert-modal-header">
+        <h3 class="cert-modal-title" id="certModalTitle"></h3>
+        <div class="cert-modal-actions">
+          <a id="certDownloadBtn" download class="cert-action-btn" title="Download">
+            <i class="fas fa-download"></i>
+          </a>
+          <button class="cert-action-btn" id="certModalClose" title="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <div class="cert-modal-body">
+        <div class="cert-img-wrapper">
+          <iframe id="certModalFrame" src="" title="Certificate Viewer" allowfullscreen></iframe>
+          <div class="cert-img-placeholder" id="certImgPlaceholder">
+            <i class="fas fa-image"></i>
+            <p>Place your certificate image at:<br/><code id="certImgPath"></code></p>
+            <span>Supported formats: JPG, PNG, PDF screenshot, WEBP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
