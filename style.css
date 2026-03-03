@@ -612,6 +612,7 @@ body:has(button:hover) .cursor-outline {
 }
 .agri-gradient { background:linear-gradient(135deg,#10b981,#0891b2); }
 .wish-gradient { background:linear-gradient(135deg,#ec4899,#7c3aed); }
+.fraud-gradient { background:linear-gradient(135deg,#f97316,#dc2626); }
 .intern-gradient { background:linear-gradient(135deg,#f59e0b,#ef4444); }
 
 .project-number { font-family:'Orbitron',sans-serif; font-size:2.5rem; font-weight:900; color:rgba(255,255,255,0.04); margin-bottom:0.5rem; line-height:1; }
