@@ -1,6 +1,6 @@
 # Goutham Reddy — Portfolio
 
-> 🌐 **Live:** [portfolio-gvgr.netlify.app](https://portfolio-gvgr.netlify.app)
+> 🌐 **Live:** https://gvgrportfolio.netlify.app/
 
 A stunning, animated personal portfolio built with pure HTML, CSS & JavaScript — no frameworks, no build tools.
 
